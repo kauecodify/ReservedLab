@@ -1,0 +1,48 @@
+/* Estilos para o calendário */
+#calendario {
+    width: 300px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  td {
+    cursor: pointer;
+  }
+  
+  /* Estilos para destacar dias de semana */
+  th:first-child, td:first-child {
+    background-color: #e6e6e6;
+  }
+  
+  /* Estilos para destacar finais de semana */
+  th:last-child, td:last-child {
+    background-color: #edff9e;
+  }
+  
+  /* Estilos para realçar dias selecionados */
+  .selected {
+    background-color: #6a9c56;
+    color: #fff;
+  }
+  
+  /* Estilos para realçar dias reservados */
+  .reserved {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
