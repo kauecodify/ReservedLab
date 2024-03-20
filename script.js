@@ -1,33 +1,3 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const homeBtn = document.getElementById("homeBtn");
-    const reserveBtn = document.getElementById("reserveBtn");
-    const contatosBtn = document.getElementById("contatosBtn");
-
-    const homeSection = document.getElementById("home");
-    const localSection = document.getElementById("local");
-    const aventuraSection = document.getElementById("aventura");
-    const mundoSection = document.getElementById("mundo");
-
-    homeBtn.addEventListener("click", function() {
-        scrollToSection(homeSection);
-    });
-
-    reserveBtn.addEventListener("click", function() {
-        scrollToSection(localSection);
-    });
-
-    contatosBtn.addEventListener("click", function() {
-        scrollToSection(mundoSection);
-    });
-
-    function scrollToSection(section) {
-        window.scrollTo({
-            top: section.offsetTop,
-            behavior: "smooth"
-        });
-    }
-});
-
 function inicio() {
     alert("Bem-vindo ao Hotel ReservedLab!");
 
@@ -61,9 +31,30 @@ function inicio() {
 function acessarSistema(nomeHotel, nomeUsuario) {
     alert("Bem-vindo, " + nomeUsuario + "! É um imenso prazer ter você no " + nomeHotel);
 
+    let quartos = criarQuartos();
+
+    let numeroQuarto = prompt("Por favor, escolha o número do quarto (1-20):");
+    if (numeroQuarto >= 1 && numeroQuarto <= 20) {
+        alert("Você selecionou o " + quartos[numeroQuarto - 1]);
+    } else {
+        alert("Número do quarto inválido.");
+    }
+
     window.addEventListener("beforeunload", function() {
         despedida(nomeUsuario);
     });
+}
+
+function criarQuartos() {
+
+    let quartos = [];
+    
+    for (let i = 1; i <= 20; i++) {
+        let nomeQuarto = "quarto" + i;
+        quartos.push(nomeQuarto);
+    }
+
+    return quartos;
 }
 
 function despedida(nomeUsuario) {
