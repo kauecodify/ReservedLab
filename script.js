@@ -3,6 +3,8 @@ function inicio() {
 
     let nomeHotel = "ReservedLab";
 
+	window.onload = inicio;
+	
     let opcao = prompt("Escolha uma opção: \n1 - acessar sistema \n2 - Sair");
     switch (opcao) {
         case "1":
@@ -261,8 +263,6 @@ function compararPrecosCombustivel() {
 
 compararPrecosCombustivel();
 
-
-window.onload = inicio;
 //------------------------------------------------------------------------------------------------------------------\\
 
     
