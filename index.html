@@ -135,10 +135,13 @@
     </footer>
 
     <script>
+   document.addEventListener("DOMContentLoaded", function() {
+        inicio();
+    });
 
-                window.onload = inicio;
-        
-        function inicio() {
+    function inicio() {
+
+    }
             alert("Bem-vindo ao Hotel ReservedLab!");
 
             let nomeHotel = "ReservedLab";
@@ -166,7 +169,6 @@
                     inicio();
                     break;
             }
-        }
 
         //grid-reservas----------------------------------------------------------------------------------------------------\\
         let quartos = Array(20).fill(false);
@@ -389,7 +391,6 @@
             alert(`O preço mais barato é do ${combustivelMaisBarato}, no valor de R$ ${precoMaisBarato.toFixed(2)} por litro ou carregamento.`);
         }
 
-        compararPrecosCombustivel();
         //------------------------------------------------------------------------------------------------------------------\\
 
         //Ar-codicionado----------------------------------------------------------------------------------------------------\\
